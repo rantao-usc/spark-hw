@@ -1,4 +1,4 @@
-# Generating a graph based on 10M user ratings for various businesses on Yelp, and performing community detection on the graph to identify similar users. [[code](https://www.github.com/rantao-usc/spark-hw/HW4/task2.py)]
+# Generating a graph based on 10M user ratings for various businesses on Yelp, and performing community detection on the graph to identify similar users. [[code](https://github.com/rantao-usc/spark-hw/blob/master/HW4/task2.py)]
 
 ## Generating a graph:
 
