@@ -1,15 +1,42 @@
-# Generating a graph based on 10M user ratings for various businesses on Yelp, and performing community detection on the graph to identify similar users. [[code](https://github.com/rantao-usc/spark-hw/blob/master/HW4/task2.py)]
+# Yelp User Community Detection with Graph Analysis [[code](https://github.com/rantao-usc/spark-hw/blob/master/HW4/task2.py)]
 
-## Generating a graph:
+This project focuses on the analysis of Yelp review data to create a user-centric graph. Leveraging the power of Apache Spark, we handle a massive dataset of 10 million user ratings to generate the graph and perform community detection. This allows us to identify similar users based on their review behavior.
 
-Using the Yelp review dataset that contains user_id and business_id, with a massive 10 million user data, we can create a social network graph where each node represents a user. 
+## Graph Generation:
 
-An edge between two nodes will exist if the number of times that two users review the same business is greater than or equal to the filter threshold. For example, if user1 reviewed [business1, business2, business3] and user2 reviewed [business2, business3, business4, business5], and the threshold is set to 2, then there will be an edge connecting user1 and user2.
+The graph is derived from the Yelp review dataset, where each node represents a user. An edge is established between two nodes if the count of businesses reviewed by both users meets or exceeds a pre-defined threshold. This helps in defining a connection based on mutual reviews.
 
-If a user node has no edge connections, we will not include that node in the graph. For this assignment, we will use a filter threshold of 7.
+For instance, considering user1 reviews [business1, business2, business3] and user2 reviews [business2, business3, business4, business5]. If the threshold is set to 2, an edge will be established between user1 and user2, indicating common interests.
 
-## Identify similar users through user segmentation
+Users with no connections (isolated nodes) are not included in the graph. In this project, we employed a filter threshold of 7 to generate significant connections.
 
-Implement the Girvan-Newman algorithm using Spark RDD without calling existing packages to detect communities in the network graph. 
+## Community Detection and User Segmentation:
 
-Identifying communities in the network graph can help with user segmentation, which is essential in marketing analysis. Users within the same communities are considered similar users.
+This project leverages the Girvan-Newman algorithm, implemented using Spark RDD without resorting to pre-built packages, to perform community detection within the user-centric graph.
+
+Community detection plays a vital role in understanding user behavior and segmenting the user base for targeted marketing efforts. Users belonging to the same community showcase similar behaviors, offering valuable insights for business strategy.
+
+## Technologies and Libraries:
+
+- Python
+- PySpark
+- Yelp Review Data
+
+## How to Run:
+
+1. Ensure you have PySpark installed and properly configured.
+2. Clone the repository and navigate to the relevant directory.
+3. Run the Python script by using the following command:
+
+```bash
+spark-submit task2.py <input_file_path> <betweenness_output_file_path> <community_output_file_path>
+```
+Replace `<input_file_path>`, `<betweenness_output_file_path>`, and `<community_output_file_path>` with the paths to your input data and your desired output file paths.
+
+## Contributions and License:
+
+This is a student project and not open to contributions. However, feel free to explore, fork, and use the code under the MIT license. If you have any questions or suggestions, please open an issue.
+
+## Contact:
+
+If you have any questions or want to discuss this project further, please feel free to reach out.
