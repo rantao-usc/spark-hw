@@ -4,6 +4,11 @@
 
 This script is designed to process and predict data using Apache Spark and the XGBoost machine learning framework. It initializes the Spark context, loads data from CSV and JSON files, performs data transformation, and finally predicts using an XGBoost model.
 
+The link of the Phttps://github.com/rantao-usc/spark-hw/blob/master/HW7%20Competition/competition.py
+
+## Illustrative Diagram
+![Alternative Text](https://github.com/rantao-usc/spark-hw/blob/master/HW7%20Competition/demochart.drawio.png)
+
 ## Key Functionalities
 
 1. **Initialization and Configuration**:
@@ -24,14 +29,15 @@ This script is designed to process and predict data using Apache Spark and the X
    - Predictions are made on test data.
    - Mean squared error of the predictions is calculated and printed.
 
-## Illustrative Diagram
-![Alternative Text](https://github.com/rantao-usc/spark-hw/blob/master/HW7%20Competition/demochart.drawio.png)
-
 ## Documentation
 A documentation HTML file was created to document all the information of the functions and classes, as well as detailed explanations for each step.
+
 ![Alternative Text](https://github.com/rantao-usc/spark-hw/blob/45bd0f2797d26e02978ad3aba24f87e95f867992/HW7%20Competition/documentation.jpg)
 
 The HTML file can be found at the link below：
+
+https://github.com/rantao-usc/spark-hw/tree/master/HW7%20Competition/docs/build/html
+
 
 
 ## How to Run
